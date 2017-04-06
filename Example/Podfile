@@ -1,0 +1,6 @@
+use_frameworks!
+target 'GLNotificationBar_swift3_Tests' do
+  pod 'GLNotificationBar_swift3', :path => '../'
+  
+  
+end

@@ -1,0 +1,22 @@
+{
+  "name": "GLNotificationBar_swift3",
+  "version": "0.1.0",
+  "summary": "A short description of GLNotificationBar_swift3.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/guidosabatini-sysdata/GLNotificationBar_swift3",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "guidosabatini-sysdata": "guido.sabatini@sysdata.it"
+  },
+  "source": {
+    "git": "https://github.com/guidosabatini-sysdata/GLNotificationBar_swift3.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GLNotificationBar_swift3/Classes/**/*"
+}

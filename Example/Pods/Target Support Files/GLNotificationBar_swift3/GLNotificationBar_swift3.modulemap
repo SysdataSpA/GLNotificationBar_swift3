@@ -1,0 +1,6 @@
+framework module GLNotificationBar_swift3 {
+  umbrella header "GLNotificationBar_swift3-umbrella.h"
+
+  export *
+  module * { export * }
+}

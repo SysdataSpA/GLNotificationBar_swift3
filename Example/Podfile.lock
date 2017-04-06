@@ -1,0 +1,16 @@
+PODS:
+  - GLNotificationBar_swift3 (0.1.0)
+
+DEPENDENCIES:
+  - GLNotificationBar_swift3 (from `../`)
+
+EXTERNAL SOURCES:
+  GLNotificationBar_swift3:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GLNotificationBar_swift3: 188077a97ddf98b84bc838979cf8db8064a26c73
+
+PODFILE CHECKSUM: 20c4723a3a730f24f04078b40e0bfada46abbb6a
+
+COCOAPODS: 1.1.1
