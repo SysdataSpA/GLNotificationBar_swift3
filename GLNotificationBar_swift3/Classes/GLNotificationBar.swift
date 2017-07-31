@@ -633,7 +633,9 @@ class CustomView: UIView {
             })
         }
         closeMessage(nil)
-        messageDidSelect?(true)
+        if messageDidSelect != nil {
+            messageDidSelect?(true)
+        }
     }
 
     @IBAction func tapToClose(_ tapgesture: UITapGestureRecognizer) {
