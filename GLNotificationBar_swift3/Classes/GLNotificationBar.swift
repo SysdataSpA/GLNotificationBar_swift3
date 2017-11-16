@@ -407,7 +407,7 @@ class CustomView: UIView {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(CustomView.handleDetailedPanGesture(_:)))
         detailedbanner.addGestureRecognizer(pan)
 
-        backgroudView.addSubview(mainView)
+        backgroudView.contentView.addSubview(mainView)
 
         dismissLabel.translatesAutoresizingMaskIntoConstraints = false
         dismissLabel.text = "DISMISS"
@@ -479,7 +479,7 @@ class CustomView: UIView {
 
         toolBar.translatesAutoresizingMaskIntoConstraints = false
         toolBar.isHidden = true
-        backgroudView.addSubview(toolBar)
+        backgroudView.contentView.addSubview(toolBar)
 
         // Adding autolayout
 
@@ -511,7 +511,7 @@ class CustomView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        notificationActionView.addSubview(tableView)
+        notificationActionView.contentView.addSubview(tableView)
 
         var height = "0"
         let tempLabel = UILabel()
