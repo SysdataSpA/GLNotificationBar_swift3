@@ -270,8 +270,13 @@ open class GLNotificationBar: NSObject {
         let didSelectMessage = UITapGestureRecognizer(target: self, action: #selector(CustomView.didSelectmessage(_:)))
         notificationBar.addGestureRecognizer(didSelectMessage)
 
+        var top : CGFloat = 0
+        if #available(iOS 11.0, *) {
+            top = APP_DELEGATE.keyWindow?.safeAreaInsets.top ?? 0 - APP_DELEGATE.statusBarFrame.height
+        }
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
-            let frame = CGRect(x: 0, y: 0, width: frameWidth, height: BAR_HEIGHT)
+            let frame = CGRect(x: 0, y: top, width: frameWidth, height: BAR_HEIGHT)
             notificationBar.frame = frame
         }, completion: nil)
 
@@ -283,7 +288,7 @@ open class GLNotificationBar: NSObject {
         let horizontal = NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: [], metrics: nil, views: ["view": notificationBar])
         constraints += horizontal
 
-        let vertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|[view(100)]", options: [], metrics: nil, views: ["view": notificationBar])
+        let vertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[view(100)]", options: [], metrics: ["top":top], views: ["view": notificationBar])
         constraints += vertical
 
         NSLayoutConstraint.activate(constraints)
